@@ -6,7 +6,7 @@ __global__ void addKernel(int *result){
 }
 
 int main() {
-	int result[0];
+	int result[8];
 	int *d_result;
 	cudaMalloc(&d_result, 8 * sizeof(int));
 	addKernel<<<2, 4>>>(d_result);
